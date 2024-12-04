@@ -1,4 +1,9 @@
-/*:root {
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -65,51 +70,118 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
-}*/
-/* 1. Use a more-intuitive box-sizing model */
-*, *::before, *::after {
-  box-sizing: border-box;
+}
+/* Tek buton için stil */
+.language-button {
+  position: fixed;
+  top: 20px; /* Sağ üstten 20px uzaklık */
+  right: 20px; /* Sağdan 20px uzaklık */
+  padding: 8px 16px;
+  font-size: 14px; /* Buton metninin boyutunu küçültüyoruz */
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  z-index: 1000; /* Butonların ön planda olmasını sağlamak için */
 }
 
-/* 2. Remove default margin */
-* {
+.language-button:hover {
+  background-color: #0056b3;
+}
+
+/* Başlık için font boyutunu küçültüyoruz */
+h1 {
+  font-size: 18px; /* Başlık boyutunu küçültüyoruz */
+  line-height: 1.4; /* Satır yüksekliğini artırıyoruz */
+}
+/* Genel stil */
+/* Genel stil */
+body {
+  background-color: white;
+  color: black;
+  font-family: Arial, sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: white;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Dark Mode stil */
+body.dark-mode button {
+  background-color: #444444;
+}
+
+body.dark-mode button:hover {
+  background-color: #666666;
+}
+
+/* Sağ üst köşeye butonları yerleştirme */
+.button-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  gap: 10px; /* Butonlar arasındaki mesafe */
+  z-index: 1000; /* Diğer öğelerin üstünde görünmesini sağlarız */
+}
+
+.button-container button {
+  font-size: 14px;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+/* Genel stil */
+body {
+  background-color: white;
+  color: black;
+  font-family: Arial, sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: white;
+}
+
+/* TranslationContainer'ın düzenini belirliyoruz */
+.translation-container {
+  display: flex;
+  align-items: center; /* Yatayda ortalamak için */
+  justify-content: flex-start; /* Başlangıca hizalama */
+  gap: 20px; /* Metin ile resim arasındaki mesafe */
+  padding: 20px;
+}
+
+/* Metin kısmı */
+.text p {
+  font-size: 18px;
+  line-height: 1.6;
   margin: 0;
 }
 
-body {
-  /* 3. Add accessible line-height */
-  line-height: 1.5;
-  /* 4. Improve text rendering */
-  -webkit-font-smoothing: antialiased;
-}
-
-/* 5. Improve media defaults */
-img, picture, video, canvas, svg {
-  display: block;
-  max-width: 100%;
-}
-
-/* 6. Inherit fonts for form controls */
-input, button, textarea, select {
-  font: inherit;
-}
-
-/* 7. Avoid text overflows */
-p, h1, h2, h3, h4, h5, h6 {
-  overflow-wrap: break-word;
-}
-
-/* 8. Improve line wrapping */
-p {
-  text-wrap: pretty;
-}
-h1, h2, h3, h4, h5, h6 {
-  text-wrap: balance;
-}
-
-/*
-  9. Create a root stacking context
-*/
-#root, #__next {
-  isolation: isolate;
+/* Fotoğraf kısmı */
+.image img {
+  width: 150px; /* Fotoğrafın genişliğini ayarlıyoruz */
+  height: 150px; /* Fotoğrafın yüksekliğini ayarlıyoruz */
+ 
+  object-fit: cover; /* Resmin boyutunun kutuya sığmasını sağlıyoruz */
 }
