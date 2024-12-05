@@ -1,292 +1,57 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
+/*HEADER CSS*/
 
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-}
-/* Tek buton için stil */
-.language-button {
-  position: fixed;
-  top: 20px; /* Sağ üstten 20px uzaklık */
-  right: 20px; /* Sağdan 20px uzaklık */
-  padding: 8px 16px;
-  font-size: 14px; /* Buton metninin boyutunu küçültüyoruz */
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  z-index: 1000; /* Butonların ön planda olmasını sağlamak için */
-}
-
-.language-button:hover {
-  background-color: #0056b3;
-}
-
-/* Başlık için font boyutunu küçültüyoruz */
-h1 {
-  font-size: 18px; /* Başlık boyutunu küçültüyoruz */
-  line-height: 1.4; /* Satır yüksekliğini artırıyoruz */
-}
-/* Genel stil */
-/* Genel stil */
-body {
-  background-color: white;
-  color: black;
-  font-family: Arial, sans-serif;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-body.dark-mode {
-  background-color: #121212;
-  color: white;
-}
-
-button {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-button:hover {
-  background-color: #0056b3;
-}
-
-/* Dark Mode stil */
-body.dark-mode button {
-  background-color: #444444;
-}
-
-body.dark-mode button:hover {
-  background-color: #666666;
-}
-
-/* Sağ üst köşeye butonları yerleştirme */
-.button-container {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  display: flex;
-  gap: 10px; /* Butonlar arasındaki mesafe */
-  z-index: 1000; /* Diğer öğelerin üstünde görünmesini sağlarız */
-}
-
-.button-container button {
-  font-size: 14px;
-  padding: 10px 15px;
-  cursor: pointer;
-}
-
-/* Genel stil */
-body {
-  background-color: white;
-  color: black;
-  font-family: Arial, sans-serif;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-body.dark-mode {
-  background-color: #121212;
-  color: white;
-}
-
-/* TranslationContainer'ın düzenini belirliyoruz */
-.translation-container {
-  display: flex;
-  align-items: center; /* Yatayda ortalamak için */
-  justify-content: flex-start; /* Başlangıca hizalama */
-  gap: 20px; /* Metin ile resim arasındaki mesafe */
+.header-container {
   padding: 20px;
+  background-color: #f5f5f5;
+  transition: background-color 0.3s, color 0.3s;
 }
 
-/* Metin kısmı */
-.text p {
-  font-size: 18px;
-  line-height: 1.6;
-  margin: 0;
+.header-container.dark {
+  background-color: #2c2c2c;
+  color: #f5f5f5;
 }
 
-/* Fotoğraf kısmı */
-.image img {
-  width: 150px; /* Fotoğrafın genişliğini ayarlıyoruz */
-  height: 150px; /* Fotoğrafın yüksekliğini ayarlıyoruz */
- 
-  object-fit: cover; /* Resmin boyutunun kutuya sığmasını sağlıyoruz */
-}
-.justify-content-start{ 
-  display: flex;
-  justify-content: flex-start;
-
-}
-.justify-content-between{
-  display: flex;
-  align-items: space-between;
-}
-.profile-container {
-  margin: 40px auto;
-  max-width: 800px;
-  text-align: center;
-}
-
-.profile-title {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-.profile-content {
+.header {
   display: flex;
   justify-content: space-between;
-  gap: 20px;
-}
-
-.profile-basic-info,
-.profile-about-me {
-  flex: 1;
-  padding: 20px;
-  background-color: #f9f9f9;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.profile-section-title {
-  font-size: 18px;
-  font-weight: bold;
-  color: #ff0066;
-  margin-bottom: 10px;
-}
-
-.profile-info-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  font-size: 14px;
-  text-align: left;
-}
-
-.profile-info-list li {
-  margin-bottom: 8px;
-}
-
-.profile-about-me p {
-  font-size: 14px;
-  line-height: 1.6;
-  color: #333;
-  text-align: left;
-}
-.skills-container {
-  text-align: center;
-  padding: 20px;
-}
-
-.skills-title {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-.skills-list {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.skill-card {
-  display: flex;
-  flex-direction: column;
   align-items: center;
-  background-color: #f9f9f9;
-  padding: 10px;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s, box-shadow 0.2s;
+  position: relative;
 }
 
-.skill-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+.header-right {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 20px;
+  right: 20px;
 }
 
-.skill-logo {
-  width: 60px;
-  height: 60px;
+.header-right button {
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  margin-left: 15px;
+  cursor: pointer;
+  color: inherit;
+  transition: color 0.3s;
+}
+
+.header-right button:hover {
+  color: #ff4081;
+}
+
+.content {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.content h1 {
+  font-size: 2.5rem;
   margin-bottom: 10px;
 }
 
-.skill-name {
-  font-size: 14px;
-  color: #333;
+.content p {
+  font-size: 1.2rem;
+  line-height: 1.5;
 }
