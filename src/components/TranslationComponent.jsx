@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useLanguage } from '../context/LanguageContext'; // useLanguage hook'unu import et
+import { Linkedin,Github  } from 'lucide-react';
 
 // Dil dosyasını yüklemek için bir fonksiyon
 const loadTranslation = (lang) => {
@@ -33,16 +34,18 @@ const TranslationComponent = () => {
   };
 
   return (
-    <div className="translation-container">
-      <div className="text">
+    <div >
+      <div className='translation-container'>
+        <div className="text">
         <h1>{translation.greeting || 'Loading...'}</h1>
         <button className="language-button" onClick={toggleLanguage}>
           {language === 'en' ? 'Türkçeye Geç' : 'English'}
         </button>
-      </div>
-
-      <div className="image">
+      
+        </div>
+        <div className="image">
         <img src="https://via.placeholder.com/150" alt="Profile" />
+        </div>
       </div>
 
       {/* Ekstra bilgi ve linkler kısmı */}
@@ -50,13 +53,23 @@ const TranslationComponent = () => {
       <div className="extra-info">
         <p>
           {language === 'en' 
-            ? <>
+            ? <div >
+            <div className='justify-content-start'>
+            <Linkedin/>
+            <Github/>
+            </div >
+              <div>
                 I am currently freelancing in <a href="https://example.com/ux" target="_blank" rel="noopener noreferrer">UX</a>, 
                 <a href="https://example.com/ui" target="_blank" rel="noopener noreferrer">UI</a>, and 
                 <a href="https://example.com/web-design" target="_blank" rel="noopener noreferrer">Web Design</a> projects. 
                 Feel free to invite me to join your team - <a href="mailto:pratamaiosi@gmail.com">pratamaiosi@gmail.com</a>
-              </>
+              </div>
+            </div>
             : <>
+            <div className='justify-content-start'>
+            <Linkedin/>
+            <Github/>
+            </div >
                 Şu anda <a href="https://example.com/ux" target="_blank" rel="noopener noreferrer">UX</a>, 
                 <a href="https://example.com/ui" target="_blank" rel="noopener noreferrer">UI</a>, ve 
                 <a href="https://example.com/web-design" target="_blank" rel="noopener noreferrer">Web Tasarım</a> projelerinde serbest çalışıyorum. 

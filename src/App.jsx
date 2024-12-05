@@ -4,7 +4,9 @@ import { LanguageProvider } from './context/LanguageContext'; // LanguageProvide
 import TranslationComponent from './components/TranslationComponent'; // Dil değiştirme bileşeni
 import ThemeAndLanguageToggle from './components/ThemeAndLanguageToggle'; // Dark mode ve dil butonları
 import { ThemeProvider } from './context/ThemeContext'; 
+import Skills from "./components/Skils"
 import './App.css';
+import Profile from './components/Profile';
 
 const App = () => {
   const { isDarkMode } = useTheme(); // Tema durumunu alıyoruz
@@ -23,6 +25,8 @@ const App = () => {
   
       <TranslationComponent /> {/* Dil değiştirme bileşeni */}
       <ThemeAndLanguageToggle /> {/* Dark mode ve dil butonları */}
+      <Skills />
+      <Profile/>
     </div>
   );
 };

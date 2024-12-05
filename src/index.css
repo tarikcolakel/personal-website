@@ -185,3 +185,108 @@ body.dark-mode {
  
   object-fit: cover; /* Resmin boyutunun kutuya sığmasını sağlıyoruz */
 }
+.justify-content-start{ 
+  display: flex;
+  justify-content: flex-start;
+
+}
+.justify-content-between{
+  display: flex;
+  align-items: space-between;
+}
+.profile-container {
+  margin: 40px auto;
+  max-width: 800px;
+  text-align: center;
+}
+
+.profile-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.profile-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.profile-basic-info,
+.profile-about-me {
+  flex: 1;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.profile-section-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ff0066;
+  margin-bottom: 10px;
+}
+
+.profile-info-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+  text-align: left;
+}
+
+.profile-info-list li {
+  margin-bottom: 8px;
+}
+
+.profile-about-me p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  text-align: left;
+}
+.skills-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.skills-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.skills-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.skill-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.skill-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.skill-logo {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px;
+}
+
+.skill-name {
+  font-size: 14px;
+  color: #333;
+}
