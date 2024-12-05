@@ -1,24 +1,39 @@
-import React, { createContext, useContext, useState } from 'react';
+import React, { createContext, useState, useContext } from "react";
 
-// Dil için context'i oluşturuyoruz
+// Dil için context oluştur
 const LanguageContext = createContext();
 
-// LanguageProvider bileşeni
-export const LanguageProvider = ({ children }) => {
-  const [language, setLanguage] = useState('en'); // Varsayılan dil İngilizce
+const initialLanguageData = {
+  en: {
+    greeting: "I’m Ahmet Tarık. I’m a full-stack developer. I can craft solid and scalable frontend products. Let’s meet!",
+    description: "This is a demo of dark mode and language switching.",
+    switchTo: "Türkçe'ye geç",
+    skills: "Skills",
+    profile: "Profile",
+  },
+  tr: {
+    greeting: "Ben Ahmet Tarık. Ben tam kapsamlı bir geliştiriciyim. Sağlam ve ölçeklenebilir ön uç ürünler üretebilirim. Hadi tanışalım!",
+    description: "Bu, karanlık mod ve dil değiştirmenin bir demosudur.",
+    switchTo: "English",
+    skills: "Yetenekler",
+    profile: "Profil",
+  },
+};
 
-  const changeLanguage = (newLanguage) => {
-    setLanguage(newLanguage);
+export const LanguageProvider = ({ children }) => {
+  const [language, setLanguage] = useState("en");
+
+  const toggleLanguage = () => {
+    setLanguage(language === "en" ? "tr" : "en");
   };
 
+  const languageData = initialLanguageData[language];
+
   return (
-    <LanguageContext.Provider value={{ language, changeLanguage }}>
+    <LanguageContext.Provider value={{ language, toggleLanguage, languageData }}>
       {children}
     </LanguageContext.Provider>
   );
 };
 
-// useLanguage hook'u
-export const useLanguage = () => {
-  return useContext(LanguageContext);
-};
+export const useLanguage = () => useContext(LanguageContext);
