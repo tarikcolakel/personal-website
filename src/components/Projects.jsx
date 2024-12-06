@@ -1,51 +1,49 @@
 import React from "react";
+import { useLanguage } from "../context/LanguageContext";
 
 const Projects = () => {
+  const { texts, language } = useLanguage();
   return (
     <div className="projects-container">
       {/* Left side */}
       <div className="left-projects">
-        <h2>Random Jokes</h2>
+        <h2>{texts[language].randomJokes}</h2>
         <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aut,
-          odit laborum aliquam voluptatum nisi mollitia.
+        {texts[language].randomJokesDescription}
         </p>
         <div className="project-buttons">
-          <button className="project-btn">React</button>
-          <button className="project-btn">Vercel</button>
-          <button className="project-btn">Axios</button>
+          <button className="project-btn">{texts[language].react}</button>
+          <button className="project-btn">{texts[language].axios}</button>
+          <button className="project-btn">{texts[language].vercel}</button>
         </div>
         <div className="project-buttons">
-          <button className="project-btn">Router</button>
+          <button className="project-btn">{texts[language].router}</button>
         </div>
         <div className="project-links">
-          <a href="https://github.com" className="project-link">View on Github</a>
-          <a href="https://app.com" className="project-link">Go to App</a>
+          <a href="https://github.com" className="project-link">{texts[language].github}</a>
+          <a href="https://app.com" className="project-link">{texts[language].goToApp}</a>
         </div>
         <img src="/f246155782db0594c00c688cdbf27f80.png" alt="Random Jokes" />
       </div>
 
       {/* Right side */}
       <div className="right-projects">
-        <h2>Are you bored?</h2>
+        <h2>{texts[language].areYouBored}</h2>
         <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aut,
-          odit laborum aliquam voluptatum nisi mollitia minima accusamus ratione
-          soluta aperiam sit voluptate? Dicta quod deserunt quam temporibus cumque
-          magnam!
+        {texts[language].randomJokesDescription}
         </p>
         <div className="project-buttons">
-          <button className="project-btn">React</button>
-          <button className="project-btn">Redux</button>
-          <button className="project-btn">Vercel</button>
+          <button className="project-btn">{texts[language].react}</button>
+          <button className="project-btn">{texts[language].redux}</button>
+          <button className="project-btn">{texts[language].vercel}</button>
         </div>
         <div className="project-buttons">
-          <button className="project-btn">Axios</button>
-          <button className="project-btn">Router</button>
+          <button className="project-btn">{texts[language].axios}</button>
+          <button className="project-btn">{texts[language].router}</button>
         </div>
         <div className="project-links">
-          <a href="https://github.com" className="project-link">View on Github</a>
-          <a href="https://app.com" className="project-link">Go to App</a>
+          <a href="https://github.com" className="project-link">{texts[language].github}</a>
+          <a href="https://app.com" className="project-link">{texts[language].goToApp}</a>
         </div>
         <img src="/f246155782db0594c00c688cdbf27f80.png" alt="Are you bored?" />
       </div>

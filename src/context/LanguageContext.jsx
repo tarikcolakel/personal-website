@@ -35,6 +35,8 @@ export const LanguageProvider = ({ children }) => {
     axios: "Axios",
     router: "Router",
     randomJokes: "Random Jokes",
+    github:"View on Github",
+    goToApp:"Go to app",
     randomJokesDescription:
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aut, odit laborum aliquam voluptatum nisi mollitia.",
 
@@ -60,10 +62,12 @@ export const LanguageProvider = ({ children }) => {
           areYouBoredDescription:
             "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aut, odit laborum aliquam voluptatum nisi mollitia minima accusamus ratione soluta aperiam sit voluptate? Dicta quod deserunt quam temporibus cumque magnam!",
           react: "React",
+          goToApp:"app'e git",
           redux: "Redux",
           vercel: "Vercel",
           axios: "Axios",
           router: "Router",
+          github:"Github'da görüntüle",
       },
   };
   
