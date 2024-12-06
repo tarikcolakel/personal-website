@@ -1,25 +1,28 @@
 import React from "react";
+import { useLanguage } from "../context/LanguageContext";
+import { useTheme } from "../context/ThemeContext";
 
+const skillsData = [
+  { name: "JavaScript", imgSrc: "/icons/JavaScript-logo.png" },
+  { name: "React", imgSrc: "/icons/react-logo.png" },
+  { name: "Redux", imgSrc: "/icons/redux-logo.png" },
+  { name: "Node.js", imgSrc: "/icons/node-logo.png" },
+  { name: "VS Code", imgSrc: "/icons/vscode-logo.png" },
+  { name: "Figma", imgSrc: "/icons/figma-logo.png" },
+];
 
 const Skills = () => {
-
-  const skills = [
-    { logo: "/icons/JavaScript-logo.png", name: "JAVASCRIP" },
-    { logo: "/icons/react-logo.png", name: "REACT" },
-    { logo: "/icons/redux-logo.png", name: "REDUX" },
-    { logo: "/icons/node-logo.png", name: "NODE" },
-    { logo: "/icons/vscode-logo.png", name: "VS CODE" },
-    { logo: "/icons/figma-logo.png", name: "FIGMA" },
-  ];
+  const { texts, language } = useLanguage();
+  const { isDarkMode } = useTheme();
 
   return (
-    <div >
-      <h2 className="skills-title">Skills</h2>
-      <div className="translation-container">
-        {skills.map((skill, index) => (
-          <div key={index} className="skill-card">
-            <img src={skill.logo} alt={skill.name} className="skill-logo" />
-            <p className="skill-name">{skill.name}</p>
+    <div className={`skills-container ${isDarkMode ? "dark" : ""}`}>
+      <h2>{texts[language].skillsTitle}</h2>
+      <div className="skills-grid">
+        {skillsData.map((skill, index) => (
+          <div key={index} className="skill-item">
+            <img src={skill.imgSrc} alt={skill.name} className="skill-logo" />
+            <p>{skill.name}</p>
           </div>
         ))}
       </div>

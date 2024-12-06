@@ -1,39 +1,76 @@
-import React, { createContext, useState, useContext } from "react";
+import React, { createContext, useContext, useState } from "react";
 
-// Dil için context oluştur
 const LanguageContext = createContext();
 
-const initialLanguageData = {
-  en: {
-    greeting: "I’m Ahmet Tarık. I’m a full-stack developer. I can craft solid and scalable frontend products. Let’s meet!",
-    description: "This is a demo of dark mode and language switching.",
-    switchTo: "Türkçe'ye geç",
-    skills: "Skills",
-    profile: "Profile",
-  },
-  tr: {
-    greeting: "Ben Ahmet Tarık. Ben tam kapsamlı bir geliştiriciyim. Sağlam ve ölçeklenebilir ön uç ürünler üretebilirim. Hadi tanışalım!",
-    description: "Bu, karanlık mod ve dil değiştirmenin bir demosudur.",
-    switchTo: "English",
-    skills: "Yetenekler",
-    profile: "Profil",
-  },
-};
+export const useLanguage = () => useContext(LanguageContext);
 
 export const LanguageProvider = ({ children }) => {
   const [language, setLanguage] = useState("en");
 
   const toggleLanguage = () => {
-    setLanguage(language === "en" ? "tr" : "en");
+    setLanguage((prev) => (prev === "en" ? "tr" : "en"));
   };
 
-  const languageData = initialLanguageData[language];
+  const texts = {
+    en: {
+      greeting: "Hi! 👋",
+      description: "I’m Almila. I’m a full-stack developer. I can craft solid and scalable frontend products. Let’s meet!",
+      freelance: "Currently Freelancing for UX, UI, & Web Design Projects.",
+      invite: "Invite me to join your team ->",
+      skillsTitle: "My Skills",
+      basicInfo: "Basic Information",
+      birthdate: "Birthdate",
+      city: "City of Residence",
+      education: "Education",
+      preferredRole: "Preferred Role",
+      aboutMe: "About Me",
+      aboutMeDescription:
+        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aut, odit laborum aliquam voluptatum nisi mollitia. Mnima accusamus ratione soluta aperiam sit voluptate? Dicta quod deserunt quam temporibus cumque magnam!",
+        areYouBored: "Are you bored?",
+    areYouBoredDescription:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aut, odit laborum aliquam voluptatum nisi mollitia minima accusamus ratione soluta aperiam sit voluptate? Dicta quod deserunt quam temporibus cumque magnam!",
+    react: "React",
+    redux: "Redux",
+    vercel: "Vercel",
+    axios: "Axios",
+    router: "Router",
+    randomJokes: "Random Jokes",
+    randomJokesDescription:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aut, odit laborum aliquam voluptatum nisi mollitia.",
+
+      },
+    tr: {
+      greeting: "Merhaba 👋",
+      description: "Ben Almila. Ben tam kapsamlı bir geliştiriciyim. Sağlam ve ölçeklenebilir ön uç ürünler üretebilirim. Hadi tanışalım!",
+      freelance: "Şu anda UX, UI ve Web Tasarım Projeleri için çalışıyorum.",
+      invite: "Beni ekibinize katılmaya davet edin ->",
+      skillsTitle: "Yeteneklerim",
+      basicInfo: "Temel Bilgiler",
+      birthdate: "Doğum Tarihi",
+      city: "İkamet Şehri",
+      education: "Eğitim Durumu",
+      preferredRole: "Tercih Ettiği Rol",
+      aboutMe: "Hakkımda",
+      aboutMeDescription:
+        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aut, odit laborum aliquam voluptatum nisi mollitia. Mnima accusamus ratione soluta aperiam sit voluptate? Dicta quod deserunt quam temporibus cumque magnam!",
+        randomJokes: "Rastgele Şakalar",
+        randomJokesDescription:
+          "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aut, odit laborum aliquam voluptatum nisi mollitia.",
+          areYouBored: "Sıkıldın mı?",
+          areYouBoredDescription:
+            "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aut, odit laborum aliquam voluptatum nisi mollitia minima accusamus ratione soluta aperiam sit voluptate? Dicta quod deserunt quam temporibus cumque magnam!",
+          react: "React",
+          redux: "Redux",
+          vercel: "Vercel",
+          axios: "Axios",
+          router: "Router",
+      },
+  };
+  
 
   return (
-    <LanguageContext.Provider value={{ language, toggleLanguage, languageData }}>
+    <LanguageContext.Provider value={{ language, texts, toggleLanguage }}>
       {children}
     </LanguageContext.Provider>
   );
 };
-
-export const useLanguage = () => useContext(LanguageContext);
