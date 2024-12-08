@@ -14,7 +14,7 @@ export const LanguageProvider = ({ children }) => {
   const texts = {
     en: {
       greeting: "Hi! 👋",
-      description: "I’m Almila. I’m a full-stack developer. I can craft solid and scalable frontend products. Let’s meet!",
+      description: "I’m Ahmet Tarık. I’m a full-stack developer. I can craft solid and scalable frontend products. Let’s meet!",
       freelance: "Currently Freelancing for UX, UI, & Web Design Projects.",
       invite: "Invite me to join your team ->",
       skillsTitle: "My Skills",
@@ -25,7 +25,7 @@ export const LanguageProvider = ({ children }) => {
       preferredRole: "Preferred Role",
       aboutMe: "About Me",
       aboutMeDescription:
-        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aut, odit laborum aliquam voluptatum nisi mollitia. Mnima accusamus ratione soluta aperiam sit voluptate? Dicta quod deserunt quam temporibus cumque magnam!",
+        "I am a professional advancing my career in software development. I have successfully completed the frontend module of the Workintech program and am progressing towards becoming a full-stack developer. Currently, I am working on a TÜBİTAK project, honing my problem-solving skills and actively contributing to teamwork. Continuous learning and self-improvement are my top priorities in my career journey.",
         areYouBored: "Are you bored?",
     areYouBoredDescription:
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aut, odit laborum aliquam voluptatum nisi mollitia minima accusamus ratione soluta aperiam sit voluptate? Dicta quod deserunt quam temporibus cumque magnam!",
@@ -43,7 +43,7 @@ export const LanguageProvider = ({ children }) => {
       },
     tr: {
       greeting: "Merhaba 👋",
-      description: "Ben Almila. Ben tam kapsamlı bir geliştiriciyim. Sağlam ve ölçeklenebilir ön uç ürünler üretebilirim. Hadi tanışalım!",
+      description: "Ben Ahmet Tarık. Ben tam kapsamlı bir geliştiriciyim. Sağlam ve ölçeklenebilir ön uç ürünler üretebilirim. Hadi tanışalım!",
       freelance: "Şu anda UX, UI ve Web Tasarım Projeleri için çalışıyorum.",
       invite: "Beni ekibinize katılmaya davet edin ->",
       skillsTitle: "Yeteneklerim",
@@ -54,7 +54,7 @@ export const LanguageProvider = ({ children }) => {
       preferredRole: "Tercih Ettiği Rol",
       aboutMe: "Hakkımda",
       aboutMeDescription:
-        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aut, odit laborum aliquam voluptatum nisi mollitia. Mnima accusamus ratione soluta aperiam sit voluptate? Dicta quod deserunt quam temporibus cumque magnam!",
+        "Kariyerimi yazılım geliştirme alanında ilerleten bir profesyonelim. Workintech programının frontend modülünü başarıyla tamamladım ve full-stack geliştirici olma yolunda ilerliyorum. Şu anda bir TÜBİTAK projesi üzerinde çalışıyorum, problem çözme becerilerimi geliştiriyorum ve ekip çalışmasına aktif olarak katkıda bulunuyorum. Kariyer yolculuğumda sürekli öğrenme ve kendimi geliştirme en önemli önceliklerimdir.",
         randomJokes: "Rastgele Şakalar",
         randomJokesDescription:
           "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aut, odit laborum aliquam voluptatum nisi mollitia.",

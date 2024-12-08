@@ -16,7 +16,7 @@ const Content = () => {
           <p>{texts[language].freelance}</p>
           <p>
             {texts[language].invite}{" "}
-            <a href="mailto:pratamaiosi@gmail.com">pratamaiosi@gmail.com</a>
+            <a href="mailto:pratamaiosi@gmail.com">tarikcolakel@gmail.com</a>
           </p>
         </div>
       </div>

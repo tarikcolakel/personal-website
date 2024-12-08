@@ -12,13 +12,13 @@ const Profile = () => {
         <h2>{texts[language].basicInfo}</h2>
         <ul>
           <li>
-            <strong>{texts[language].birthdate}</strong>: 24.03.1996
+            <strong>{texts[language].birthdate}</strong>: 06.08.1999
           </li>
           <li>
-            <strong>{texts[language].city}</strong>: Ankara
+            <strong>{texts[language].city}</strong>: İstanbul
           </li>
           <li>
-            <strong>{texts[language].education}</strong>: Hacettepe Ünv. Biyoloji Lisans, 2016
+            <strong>{texts[language].education}</strong>: Kocaeli Ünv. Math , 2025
           </li>
           <li>
             <strong>{texts[language].preferredRole}</strong>: Frontend, UI
