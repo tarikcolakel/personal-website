@@ -7,11 +7,25 @@ const Header = () => {
   const { toggleLanguage, language } = useLanguage();
 
   return (
-    <header className="header">
-      <div className="header-buttons">
-        <button onClick={toggleDarkMode}>Dark Mode</button>
-        <button onClick={toggleLanguage}>
-          {language === "en" ? "Switch to Turkish" : "Switch to English"}
+    <header className="flex justify-between items-center p-4 bg-white dark:bg-gray-800 shadow-md">
+      {/* Logo or Title */}
+      <h1 className="text-xl font-bold text-gray-800 dark:text-gray-200">
+        My Portfolio
+      </h1>
+
+      {/* Buttons Container */}
+      <div className="flex space-x-4">
+        <button
+          onClick={toggleDarkMode}
+          className="px-4 py-2 text-sm font-medium bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-md shadow-sm hover:bg-gray-300 dark:hover:bg-gray-600 transition"
+        >
+          {language === "en" ? "Dark Mode" : "Karanlık Mod"}
+        </button>
+        <button
+          onClick={toggleLanguage}
+          className="px-4 py-2 text-sm font-medium bg-blue-500 text-white rounded-md shadow-sm hover:bg-blue-600 transition"
+        >
+          {language === "en" ? "Switch to Turkish" : "Türkçeye Geç"}
         </button>
       </div>
     </header>

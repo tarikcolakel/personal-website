@@ -10,6 +10,7 @@ import Projects from "./components/Projects";
 
 const App = () => {
   return (
+    
     <ThemeProvider>
       <LanguageProvider>
         <Header />
