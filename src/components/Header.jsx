@@ -23,7 +23,7 @@ const Header = () => {
         </button>
         <button
           onClick={toggleLanguage}
-          className="px-4 py-2 text-sm font-medium bg-blue-500 text-white rounded-md shadow-sm hover:bg-blue-600 transition"
+          className="px-4 py-2 text-sm font-medium bg-gray-200 dark:bg-gray-700 text-gray-800 rounded-md shadow-sm hover:bg-gray-300-600 transition"
         >
           {language === "en" ? "Switch to Turkish" : "Türkçeye Geç"}
         </button>

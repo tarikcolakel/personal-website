@@ -43,7 +43,7 @@ export const LanguageProvider = ({ children }) => {
       },
     tr: {
       greeting: "Merhaba 👋",
-      description: "Ben Ahmet Tarık. Ben tam kapsamlı bir geliştiriciyim. Sağlam ve ölçeklenebilir ön uç ürünler üretebilirim. Hadi tanışalım!",
+      description: "Ben Ahmet Tarık. Ben tam kapsamlı bir geliştiriciyim. Sağlam ve ölçeklenebilir frontend ürünler üretebilirim. Hadi tanışalım!",
       freelance: "Şu anda UX, UI ve Web Tasarım Projeleri için çalışıyorum.",
       invite: "Beni ekibinize katılmaya davet edin ->",
       skillsTitle: "Yeteneklerim",
